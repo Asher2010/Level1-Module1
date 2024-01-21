@@ -33,7 +33,7 @@ if __name__ == '__main__':
     draw_background()
 
     # TODO 1) Create an empty list of turtles
-
+    turtle = Turtle.turtle[]
     # TODO 2) Create a new turtle and set its shape to 'turtle
 
     # TODO 3) Set the turtle's speed to 3
