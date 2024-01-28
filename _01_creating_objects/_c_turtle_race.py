@@ -31,21 +31,29 @@ def draw_background():
 
 if __name__ == '__main__':
     draw_background()
+    y = 400
 
     # TODO 1) Create an empty list of turtles
-    turtle = Turtle.turtle[]
-    # TODO 2) Create a new turtle and set its shape to 'turtle
-
-    # TODO 3) Set the turtle's speed to 3
-
-    # TODO 4) Set the turtle's pen up
-
-    # TODO 5) Use the turtle's goto() method to set its position on the left
-    #  side of the screen
-
+    turtles = []
+    for i in range(8):
+        # TODO 2) Create a new turtle and set its shape to 'turtle
+        turtles.append(turtle.Turtle())
+        # TODO 3) Set the turtle's speed to 3
+        turtles[i].speed(3)
+        # TODO 4) Set the turtle's pen up
+        turtles[i].penup()
+        # TODO 5) Use the turtle's goto() method to set its position on the left
+        #  side of the screen
+        turtles[i].goto(-365, i*55-190)
     # TODO 6) use a loop to repeat the previous instructions and create
     #  8 turtles lined up on the left side of the screen
     #  *HINT* click on the window to print the corresponding x, y location
+
+    for j in range(1000):
+        for h in range(8):
+            turtles[h].forward(random.randint(1, 20))
+            if turtles[h].position()[0] > 350:
+                print("turtle " + str(h) + " won")
 
     # TODO 7) Move each turtle forward a random distance between 1 and 20
 
