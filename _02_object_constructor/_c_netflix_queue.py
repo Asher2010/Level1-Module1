@@ -50,4 +50,13 @@ if __name__ == '__main__':
     # TODO 5) Print all the movies in your queue.
     # TODO 6) Use your NetflixQueue object to finish the sentence "the best movie is...."
     # TODO 7) Use your NetflixQueue to finish the sentence "the second best movie is...."
+class Movie:
+    def __init__(self):
+        self.title = "Gran Turismo"
+        self.stars = 5
+
+
+
+
+
 

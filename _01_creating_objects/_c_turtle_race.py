@@ -31,8 +31,7 @@ def draw_background():
 
 if __name__ == '__main__':
     draw_background()
-    y = 400
-
+    isRacing = True
     # TODO 1) Create an empty list of turtles
     turtles = []
     for i in range(8):
@@ -49,12 +48,13 @@ if __name__ == '__main__':
     #  8 turtles lined up on the left side of the screen
     #  *HINT* click on the window to print the corresponding x, y location
 
-    for j in range(1000):
+    while isRacing == True:
         for h in range(8):
             turtles[h].forward(random.randint(1, 20))
-            if turtles[h].position()[0] > 350:
+            if turtles[h].position()[0] > 390:
                 print("turtle " + str(h) + " won")
-
+                isRacing = False
+                break
     # TODO 7) Move each turtle forward a random distance between 1 and 20
 
     # TODO 8) Create a loop to keep moving each turtle until a turtle
