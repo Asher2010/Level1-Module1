@@ -10,6 +10,7 @@ class Movie:
         if self.stars > 2:
             return "That will be $12 please."
         elif 'twilight' in self.title.lower():
+
             return "This movie is so bad, we'll pay YOU to watch it!"
         else:
             return "Don't waste your money on this horrible rubbish."
@@ -40,7 +41,7 @@ class NetflixQueue:
 
 
 if __name__ == '__main__':
-    pass
+
     # Use Movie and NetflixQueue classes above to complete the following changes:
 
     # TODO 1) Instantiate (create) at least 5 Movie objects.
@@ -50,10 +51,35 @@ if __name__ == '__main__':
     # TODO 5) Print all the movies in your queue.
     # TODO 6) Use your NetflixQueue object to finish the sentence "the best movie is...."
     # TODO 7) Use your NetflixQueue to finish the sentence "the second best movie is...."
-class Movie:
-    def __init__(self):
-        self.title = "Gran Turismo"
-        self.stars = 5
+
+    GranTurismo = Movie("Gran Turismo", 4.9)
+    print(GranTurismo.get_ticket_price())
+
+    Barbie = Movie("Barbie", 0)
+    print(Barbie.get_ticket_price())
+
+    Twilight = Movie("twilight", 1)
+    print(Twilight.get_ticket_price())
+
+    SixthSense = Movie("Sixth Sense", 5)
+    print(SixthSense.get_ticket_price())
+
+    Aquaman = Movie("Aquaman", 1)
+    print(Aquaman.get_ticket_price())
+
+    Queue = NetflixQueue()
+    Queue.add_movie(movie=GranTurismo)
+    Queue.add_movie(movie=Barbie)
+    Queue.add_movie(movie=Twilight)
+    Queue.add_movie(movie=Aquaman)
+    Queue.add_movie(movie=SixthSense)
+    Queue.print_movies()
+    Queue.sort_movies_by_rating()
+    print("The best movie is", str(Queue.get_best_movie().to_string()))
+    print("The second best movie is", Queue.get_movie(1).to_string())
+
+
+
 
 
 
