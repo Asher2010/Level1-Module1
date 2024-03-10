@@ -20,8 +20,8 @@ def setup():
     global car1
     global car2
     global car3
-    car3 = Car(100, 200, 200, 1)
-    car2 = Car(100, 400, 200, 3)
+    car3 = Car(100, 200, 200, 6)
+    car2 = Car(100, 400, 200, 4)
     car1 = Car(100, 600, 200, 5)
 
 def draw(): 
@@ -47,7 +47,7 @@ def draw():
     global frog_x
 #write individual lines of if statements so that it doesn't check when it is greater than the car
     if intersection(car2):
-        intersection = False
+        frog_y = 700
         print(frog_x)
         print(frog_y)
         print("car 2 y = " + str(car2.x))
@@ -72,11 +72,12 @@ def draw():
 
 def intersection(car):
     global frog_x, frog_y
-    if frog_y + 100 > car.y:
+    if frog_y + 100 < car.y:
         return False
     else:
-        if frog_x == car.x + car.length and frog_y <= car.y + 50:
-            return True
+        if frog_x <= car.x + car.length and frog_x >= car.x:
+            if frog_y <= car.y + 75 and frog_y + 50 >= car.y:
+                return True
     
 
     # 9. Create more car objects of different lengths, speed, and size

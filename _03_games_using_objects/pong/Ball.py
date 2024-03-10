@@ -66,6 +66,7 @@ class Ball():
         if distance <= self.radius:
             if not self.currently_intersects:
                 self.currently_intersects = True
+            
     
                 self.x_speed += 2
                 self.y_speed += 2
